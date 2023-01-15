@@ -30,7 +30,7 @@ def save_screenshot(url: str, file_path: str):
         driver.save_screenshot(file_path)
         logging.info(f'Сделан скриншот по адресу {url}')
     except Exception as ex:
-        logging.error('Ошибка', ex)
+        logging.exception('Ошибка')
         logging.info(f'Не получилось сделать запрос по - {url}')
     finally:
         driver.quit()
@@ -43,10 +43,10 @@ def make_request(url: str) -> Optional[requests.models.Response]:
     """
     try:
         response = requests.get(url)
-        logging.info('Ответ получен')
+        logging.info(f'Ответ получен {url}, статус {response.status_code}')
         return response
     except Exception as e:
-        logging.error(f'Ошибка соединения по данному URL - {url}', e)
+        logging.exception(f'Ошибка соединения по данному URL - {url}')
 
 
 def get_status_code(url: str) -> Optional[str]:

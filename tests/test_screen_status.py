@@ -21,3 +21,12 @@ def test_get_file_path(file_path):
 
 def test_make_request():
     assert make_request(TEST_UTL) is not None
+
+
+def test_wrong_url_save_screenshot(wrong_file_path):
+    save_screenshot(TEST_WRONG_UTL, wrong_file_path)
+    assert not os.path.isfile(wrong_file_path)
+
+
+def test_wrong_url_make_request():
+    assert make_request(TEST_WRONG_UTL) is None
