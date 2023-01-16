@@ -85,7 +85,7 @@ https://www.youtube.com/
 ```
 Kод ответа страницы - 200
 ```
-![Image text](https://github.com/Anzhela-Namistyuk/Bot_screenshot/blob/main/image/2023-01-13_19:39_youtube.jpg)
+![Image text](https://github.com/Anzhela-Namistyuk/Bot_screenshot/blob/main/image/2023-01-13_19:39_youtube.png)
 
 #####
 ###  Запуск бота в докерконтейнере:
