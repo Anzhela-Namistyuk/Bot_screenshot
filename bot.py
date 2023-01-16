@@ -37,8 +37,8 @@ def send_message(message):
                              f'Ошибка соединения.Проверьте написание URL {url}'
                              )
         if file_path:
-            screenshot = open(file_path, 'rb')
-            bot.send_photo(message.from_user.id, screenshot)
+            with open(file_path, 'rb') as screenshot:
+                bot.send_photo(message.from_user.id, screenshot)
     else:
         bot.send_message(message.from_user.id,
                          f'Проверьте правильно ли введен URL адрес {url}\n'
